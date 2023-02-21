@@ -46,28 +46,42 @@ div#video iframe {
   width: 140px;
 }
 
-#floating-image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 45mm;
-  height: 55mm;
+.floating-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 3s ease-in-out infinite;
+  font-family: 'Brush Script MT', cursive;
+  color: #ff69b4;
+  text-shadow: 2px 2px #f0e8e8;
+  z-index: 999;
+}
+
+@keyframes float {
+  0% {
+     transform: translate(-50%, -50%);
+     font-size: 50px;
+  }
+  50% {
+     transform: translate(-50%, -60%);
+     font-size: 70px;
+  }
+  100% {
+     transform: translate(-50%, -50%);
+     font-size: 50px;
+  }
 }
 
 .image-container {
   text-align: center;
 }
+
 .image-container img {
   display: block;
   margin: auto;
-  width: 20%;
-}
-
-
-#floating-image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 50%;
+  height: 40%;
 }
 
 #car {

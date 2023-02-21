@@ -293,11 +293,6 @@ function reveal() {
     w = 255;h = 155;
   }
 
-  var ifrm = document.createElement("iframe");
-  //ifrm.style.width = `${w}px`;
-  //ifrm.style.height = `${h}px`;
-  ifrm.style.border = 'none';
-  document.querySelector('#video').appendChild(ifrm);
 }
 
 // Set up variables
@@ -324,3 +319,6 @@ function floatImage() {
 
 // Call floatImage function every 3 seconds
 setInterval(floatImage, 3000);
+
+const balloons = document.querySelectorAll('.balloon');
+const messageContainer = document.getElementById('message-container');
